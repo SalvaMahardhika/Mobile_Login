@@ -1,5 +1,6 @@
 package com.salva.lojin
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.etEmail)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -30,7 +31,10 @@ class LoginActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-                Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
+                // Pindah ke DashboardActivity setelah login sukses
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
+                finish() // Menutup LoginActivity agar tidak bisa kembali dengan tombol back
             } else {
                 Toast.makeText(this, "Email dan password harus diisi", Toast.LENGTH_SHORT).show()
             }
