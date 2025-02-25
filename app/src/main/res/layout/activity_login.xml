@@ -40,18 +40,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
-                android:backgroundTint="@color/blue"
+
                 android:padding="12dp"
-                android:drawableLeft="@drawable/ic_email" />
+                 />
 
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
-                android:backgroundTint="@color/red"
                 android:padding="12dp"
-                android:drawableLeft="@drawable/ic_lock"
                 android:inputType="textPassword" />
 
             <Button
@@ -59,7 +57,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
-                android:backgroundTint="@color/purple"
                 android:textColor="@color/white"
                 android:layout_marginTop="16dp" />
 

@@ -16,7 +16,7 @@ class DashboardActivity : AppCompatActivity() {
 
         // Ambil email dari intent (jika ada)
         val email = intent.getStringExtra("email")
-        welcomeTextView.text = "Selamat datang, $email!"
+        welcomeTextView.text = "Selamat datang"
 
         // Tombol Logout kembali ke LoginActivity
         logoutButton.setOnClickListener {
